@@ -1,0 +1,43 @@
+{
+	"name": "sequelize-boilerplate",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"migration:generate": "npx sequelize-cli model:generate --name",
+		"lint": "eslint . --fix --max-warnings=0",
+		"format": "prettier . --write",
+		"prepare": "husky"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"argon2": "^0.41.1",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"express": "^4.21.1",
+		"jsonwebtoken": "^9.0.2",
+		"mysql2": "^3.11.3",
+		"passport": "^0.7.0",
+		"passport-jwt": "^4.0.1",
+		"passport-local": "^1.0.0",
+		"sequelize": "^6.37.5",
+		"uuid": "^11.0.2"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.13.0",
+		"eslint": "^9.13.0",
+		"eslint-config-prettier": "^9.1.0",
+		"globals": "^15.11.0",
+		"husky": "^9.1.6",
+		"lint-staged": "^15.2.10",
+		"prettier": "^3.3.3"
+	},
+	"lint-staged": {
+		"*.ts": [
+			"lint",
+			"format"
+		]
+	}
+}
